@@ -2,23 +2,14 @@ import React, { useState } from "react";
 import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image } from "@react-pdf/renderer";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
-
+import { IMyForm } from "./myform.interface";
+import { IMyDocumentProps } from "./document.interface";
 const FormStyle = styled.form`
   display: flex;
   justify-content: center;
   padding: 30px;
   gap: 15px;
 `;
-
-interface IMyForm {
-  picture: FileList;
-  name: string;
-}
-
-interface IMyDocumentProps {
-  name: string;
-  picture: File;
-}
 
 const MyDocument: React.FC<IMyDocumentProps> = ({ name, picture }) => {
   return (
