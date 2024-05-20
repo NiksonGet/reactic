@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Button } from "antd";
 import type { ColumnsType } from "antd/es/table";
-
-interface DataType {
-  country: string;
-  name: string;
-  house: string;
-}
+import { DataType } from "./data.interface";
 
 const columns: ColumnsType<DataType> = [
   {

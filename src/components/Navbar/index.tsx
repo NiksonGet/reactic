@@ -2,15 +2,9 @@ import { CONTACT_ROUTE, NEWS_ROUTE, ACCOUNT_ROUTE, SHOP_ROUTE } from "../../app/
 import { Link } from "react-router-dom";
 import React, { createContext, useState, useContext } from "react";
 import "../../style/style.css";
+import { AuthContextType } from "./types";
 
 // Функция войти/выйти
-
-type AuthContextType = {
-  isAuthenticated: boolean;
-  login: () => void;
-  logout: () => void;
-};
-
 export const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
