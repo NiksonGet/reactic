@@ -1,19 +1,13 @@
-<<<<<<< HEAD
+import DinamicPagination from "../../components/DynamicPagination";
 
 const News = () => {
+<<<<<<< HEAD
     return ( 
-        <>
-        <h1 className="heading">
-            Страница новостей
-        </h1>
-        </>
+        <DinamicPagination/>  
      );
 }
  
 =======
-import DinamicPagination from "../../components/DynamicPagination";
-
-const News = () => {
   return <DinamicPagination />;
 };
 
