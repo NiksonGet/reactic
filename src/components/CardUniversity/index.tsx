@@ -3,6 +3,7 @@ import { IUniversity } from "../DynamicPagination/university.interface";
 import { styled } from "styled-components";
 
 const CardStyled = styled.li`
+<<<<<<< HEAD
     height: 50px;
     color: #ffffff;
     list-style-type: auto;
@@ -16,3 +17,18 @@ const CardUniversity: FC <{data: IUniversity}> = ({data}) => (
     </>
 )
 export default CardUniversity
+=======
+  height: 50px;
+  color: #ffffff;
+  list-style-type: auto;
+`;
+
+const CardUniversity: FC<{ data: IUniversity }> = ({ data }) => (
+  <>
+    <CardStyled>
+      {data.country} - {data.name}
+    </CardStyled>
+  </>
+);
+export default CardUniversity;
+>>>>>>> master
