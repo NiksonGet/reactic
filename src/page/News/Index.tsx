@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const News = () => {
     return ( 
@@ -9,4 +10,12 @@ const News = () => {
      );
 }
  
+=======
+import DinamicPagination from "../../components/DynamicPagination";
+
+const News = () => {
+  return <DinamicPagination />;
+};
+
+>>>>>>> master
 export default News;

@@ -1,8 +1,16 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image} from "@react-pdf/renderer";
 import {useForm } from "react-hook-form";
 import styled from "styled-components";
 
+=======
+import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image } from "@react-pdf/renderer";
+import { useForm } from "react-hook-form";
+import styled from "styled-components";
+import { IMyForm } from "./myform.interface";
+import { IMyDocumentProps } from "./document.interface";
+>>>>>>> master
 const FormStyle = styled.form`
   display: flex;
   justify-content: center;
@@ -10,6 +18,7 @@ const FormStyle = styled.form`
   gap: 15px;
 `;
 
+<<<<<<< HEAD
 interface IMyForm {
   picture: FileList;
   name: string;
@@ -20,6 +29,8 @@ interface IMyDocumentProps {
   picture: File;
 }
 
+=======
+>>>>>>> master
 const MyDocument: React.FC<IMyDocumentProps> = ({ name, picture }) => {
   return (
     <Document>
@@ -55,10 +66,14 @@ const styles = StyleSheet.create({
 const Account = () => {
   const [task, setTasks] = useState<IMyForm>();
 
+<<<<<<< HEAD
   const {
     register,
     handleSubmit,
   } = useForm<IMyForm>({
+=======
+  const { register, handleSubmit } = useForm<IMyForm>({
+>>>>>>> master
     mode: "onBlur",
   });
 
@@ -77,6 +92,10 @@ const Account = () => {
               message: "Нужно больше символов",
             },
           })}
+<<<<<<< HEAD
+=======
+          placeholder="Введите ваше имя"
+>>>>>>> master
         />
         <input
           type="file"
@@ -90,7 +109,11 @@ const Account = () => {
 
       {!!task?.name && (
         <PDFDownloadLink document={<MyDocument name={task.name} picture={task.picture[0]} />} fileName="lab_pdf.pdf">
+<<<<<<< HEAD
           {({loading}) => (loading ? "Loading document..." : "Download now!")}
+=======
+          {({ loading }) => (loading ? "Loading document..." : "Download now!")}
+>>>>>>> master
         </PDFDownloadLink>
       )}
     </>
