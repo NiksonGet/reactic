@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Table, Button } from 'antd';
+import type { ColumnsType } from 'antd/es/table';
+
+interface DataType {
+  country: string;
+  name: string;
+  house: string;
+}
+
+const columns: ColumnsType<DataType> = [
+  {
+    title: 'Страна',
+    dataIndex: 'country',
+    key: 'country',
+  },
+  {
+    title: 'Название школы',
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: 'Название города',
+    dataIndex: 'house',
+    key: 'house',
+=======
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Button } from "antd";
@@ -19,6 +47,7 @@ const columns: ColumnsType<DataType> = [
     title: "Название города",
     dataIndex: "house",
     key: "house",
+>>>>>>> master
   },
 ];
 
@@ -28,6 +57,14 @@ const Shop = () => {
 
   const getUniversity = async (page: number, limit: number) => {
     try {
+<<<<<<< HEAD
+      const response = await axios.get(`http://universities.hipolabs.com/search?offset=${(page - 1) * limit}&limit=${limit}`);
+      setDataSource(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };  
+=======
       const response = await axios.get(
         `http://universities.hipolabs.com/search?offset=${(page - 1) * limit}&limit=${limit}`,
       );
@@ -36,6 +73,7 @@ const Shop = () => {
       console.error("Error fetching data:", error);
     }
   };
+>>>>>>> master
 
   useEffect(() => {
     getUniversity(page, 5);
@@ -50,6 +88,10 @@ const Shop = () => {
       <Button onClick={() => setPage(page + 1)}>Вперед</Button>
     </>
   );
+<<<<<<< HEAD
+}
+=======
 };
+>>>>>>> master
 
 export default Shop;
